@@ -1,17 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AndroidLayouts">
-    <shared>
-      <config />
-    </shared>
+    <layouts>
+      <layout url="file://$PROJECT_DIR$/ExpenseTracker-master/app/src/main/res/layout/activity_auth_first_page.xml">
+        <config>
+          <theme>@style/Theme.ExpenseTracker</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/ExpenseTracker-master/app/src/main/res/layout/activity_register.xml">
+        <config>
+          <theme>@style/Theme.ExpenseTracker</theme>
+        </config>
+      </layout>
+    </layouts>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9420020-ac94-4b6e-903f-96a54ed95fa7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/google-services.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/local.properties" afterDir="false" />
+    <list default="true" id="75426e41-e4d8-46ed-9df9-1297bb0ff3a1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/views/activities/ReadWriteUserDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/views/activities/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/views/activities/UserProfile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/views/activities/login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/res/layout/activity_login.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/res/layout/activity_user_profile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/8.4/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/8.4/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/8.4/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/8.4/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/8.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/8.4/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/8.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/8.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/8.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/8.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/app/google-services.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/google-services.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/views/activities/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/views/activities/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/res/drawable/ic_launcher_foreground.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/res/drawable/ic_launcher_foreground.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/res/menu/top_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/res/menu/top_menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +63,12 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$/ExpenseTracker-master/app">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/ExpenseTracker-master">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand />
@@ -39,6 +78,14 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="layoutResourceFile" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -46,9 +93,12 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 3
+  &quot;associatedIndex&quot;: 4
 }</component>
-  <component name="ProjectId" id="2eohR5P0ymQfjre5MsU8yzv0V4n" />
+  <component name="ProjectId" id="2eoxQfyKWJskrRaUDlJz9d0YwtB" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -61,15 +111,38 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/USER/ExpenseTracker/ExpenseTracker-master"
+    "last_directory_selection": "C:/Users/USER/ExpenseTracker/ExpenseTracker-master/app/src/main/java/com/example/expensetracker",
+    "last_opened_file_path": "C:/Users/USER/ExpenseTracker/ExpenseTracker-master/app/src/main/res/layout",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\USER\ExpenseTracker\ExpenseTracker-master" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.expensetracker.views.activities" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\USER\ExpenseTracker\ExpenseTracker-master\app\src\main\res\layout" />
+      <recent name="C:\Users\USER\ExpenseTracker\ExpenseTracker-master\app" />
+    </key>
+    <key name="android.template.-2098789931">
+      <recent name="com.example.expensetracker.views.activities" />
+    </key>
+    <key name="android.template.-14453316">
+      <recent name="com.example.expensetracker.views.activities" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.expensetracker.views.activities" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="gradle ./gradlew build --refresh-dependencies " />
+    </option>
+  </component>
+  <component name="RunManager" selected="Android App.app">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="ExpenseTracker.app.main" />
       <option name="DEPLOY" value="true" />
@@ -137,15 +210,43 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ExpenseTracker-master [./gradlew build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/ExpenseTracker-master" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--refresh-dependencies" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="./gradlew" />
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.ExpenseTracker-master [./gradlew build]" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c9420020-ac94-4b6e-903f-96a54ed95fa7" name="Changes" comment="" />
-      <created>1712576826822</created>
+      <changelist id="75426e41-e4d8-46ed-9df9-1297bb0ff3a1" name="Changes" comment="" />
+      <created>1712584723336</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1712576826822</updated>
+      <updated>1712584723336</updated>
     </task>
     <servers />
   </component>

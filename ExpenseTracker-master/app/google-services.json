@@ -8,47 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:705752243567:android:31104ad22adc9cb33f5c9a",
-        "android_client_info": {
-          "package_name": "com.example.anew"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDzlKomy2nudCc3yerT_BmtBryfGuCb1FM"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:705752243567:android:06113867171f6f2d3f5c9a",
+        "mobilesdk_app_id": "1:705752243567:android:1ab51fcb65b3bad83f5c9a",
         "android_client_info": {
           "package_name": "com.example.expensetracker"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDzlKomy2nudCc3yerT_BmtBryfGuCb1FM"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:705752243567:android:dafb5bf8dd33aeaf3f5c9a",
-        "android_client_info": {
-          "package_name": "com.example.regis"
         }
       },
       "oauth_client": [],

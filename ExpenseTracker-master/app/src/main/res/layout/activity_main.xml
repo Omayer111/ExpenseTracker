@@ -8,6 +8,7 @@
     tools:context=".views.activities.MainActivity"
     tools:ignore="ExtraText">
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/trasactionList"
         android:layout_width="0dp"
@@ -31,6 +32,7 @@
         app:tint="@color/white"
         app:srcCompat="@drawable/baseline_add_24" />
 
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView2"
         android:layout_width="match_parent"
@@ -53,6 +55,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tabLayout">
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -118,6 +121,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="0.0" />
+
         </LinearLayout>
     </LinearLayout>
 
