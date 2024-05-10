@@ -132,12 +132,12 @@ public class register extends AppCompatActivity {
                                 if (task.isSuccessful()) {
 
                                     FirebaseUser user = mAuth.getCurrentUser();
-                                    ReadWriteUserDetails readWriteUserDetails = new ReadWriteUserDetails(email,password,name,dob,mobile);
+                                    ReadWriteUserDetails readWriteUserDetails = new ReadWriteUserDetails(name,email,dob,mobile,password);
                                     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Users");
 
                                     databaseReference.child(user.getUid()).setValue(readWriteUserDetails).addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
-                                        public void onComplete(@NonNull Task<Void> task) {
+                                        public void onComplete(@NonNull Task<Void>task) {
                                             if(task.isSuccessful()){
                                                 Toast.makeText(register.this, "User Registered Successfully", Toast.LENGTH_SHORT).show();
                                                 Intent intent = new Intent(register.this, login.class);
