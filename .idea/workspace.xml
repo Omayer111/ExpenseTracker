@@ -19,8 +19,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75426e41-e4d8-46ed-9df9-1297bb0ff3a1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/8.4/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/8.4/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/8.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/8.4/executionHistory/executionHistory.bin" afterDir="false" />
@@ -35,9 +33,11 @@
       <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/Model/Income.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/Model/Income.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/Model/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/Model/Transaction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/Model/TransactionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/Model/TransactionFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/utils/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/views/activities/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/views/activities/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/views/activities/register.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/views/activities/register.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/views/fragments/Add_Transaction_Fragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/views/fragments/Add_Transaction_Fragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/res/layout/activity_main.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

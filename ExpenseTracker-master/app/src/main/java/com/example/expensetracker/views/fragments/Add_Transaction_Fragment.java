@@ -77,7 +77,7 @@ long id=0;Date date;String type;
             binding.expense.setBackground(getContext().getDrawable(R.drawable.default_selector));
             binding.expense.setTextColor(getContext().getColor(R.color.textColor));
             binding.income.setTextColor(getContext().getColor(R.color.greenColor));
-            type="Income";
+            type=Constants.INCOME;
            // transaction.setType(Constants.INCOME);
         });
 
@@ -86,7 +86,7 @@ long id=0;Date date;String type;
             binding.expense.setBackground(getContext().getDrawable(R.drawable.expense_selector));
             binding.income.setTextColor(getContext().getColor(R.color.textColor));
             binding.expense.setTextColor(getContext().getColor(R.color.redColor));
-               type="Expense";
+               type=Constants.EXPENSE;
          //   transaction.setType(Constants.EXPENSE);
         });
 
@@ -221,7 +221,7 @@ long id=0;Date date;String type;
 
 
 
-//            ((MainActivity)getActivity()).viewModel.addTransactions(transaction);
+            ((MainActivity)getActivity()).updateDate();
 //            ((MainActivity)getActivity()).getTransactions();
             dismiss();
         });

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -42,7 +43,7 @@ import java.util.concurrent.CountDownLatch;
 public class MainActivity extends AppCompatActivity {
    ActivityMainBinding binding;
    Calendar calendar;
-
+   TextView IncomePrint,ExpensePrint,TotalPrint;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +51,9 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         binding=ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+         IncomePrint=findViewById(R.id.IncomeLbl);
+         ExpensePrint=findViewById(R.id.ExpenseLbl);
+         TotalPrint=findViewById(R.id.TotalLbl);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -148,7 +152,12 @@ public class MainActivity extends AppCompatActivity {
 
     void fetchTransactionsFromFirebase(String fetchinDate) {
         ArrayList<Transaction> transactions = new ArrayList<>();
-
+        final double[] Income = {0.0};
+        final double[] Expense = {0.0};
+        final double[] Total = {0.0};
+        IncomePrint.setText(String.valueOf(0.0));
+        ExpensePrint.setText(String.valueOf(0.0));
+        TotalPrint.setText(String.valueOf(0.0));
         FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         if (firebaseUser == null) {
             // User is not authenticated, handle accordingly (e.g., show login screen)
@@ -163,6 +172,7 @@ public class MainActivity extends AppCompatActivity {
         transactionsRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+           //     int ff=0;
                 for (DataSnapshot transactionSnapshot : snapshot.getChildren()) {
                     String type = transactionSnapshot.child("type").getValue(String.class);
                     String category = transactionSnapshot.child("category").getValue(String.class);
@@ -176,9 +186,23 @@ public class MainActivity extends AppCompatActivity {
                     TransactionFactory transactionFactory = new TransactionFactory();
                     String date = dateString; // Assuming dateString is a valid date string
                     Transaction transaction = transactionFactory.getTransaction(type, category, account, note, date, amount, id);
-                 if(date.equals(fetchinDate))   transactions.add(transaction);
+                 if(date.equals(fetchinDate))  {
+                     transactions.add(transaction);
+                    // ff=1;
+                     if(type.equals(Constants.INCOME)){
+                                   Income[0] +=amount;
+                     }
+                     else{
+                         Expense[0] +=amount;
+                     }
+                     Total[0] +=amount;
+                 }
                 }
-
+                 if(transactions.size()>0){
+                     IncomePrint.setText(String.valueOf(Income[0]));
+                     ExpensePrint.setText(String.valueOf(Expense[0]));
+                     TotalPrint.setText(String.valueOf(Total[0]));
+                 }
                 // Update UI with fetched transactions
                 TransactionsAdapter transactionsAdapter = new TransactionsAdapter(MainActivity.this, transactions);
                 binding.trasactionList.setLayoutManager(new LinearLayoutManager(MainActivity.this));
@@ -197,7 +221,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    void updateDate(){
+   public void updateDate(){
 //        SimpleDateFormat dateFormat=new SimpleDateFormat("dd MMMM,YYYY");
         binding.currentDate.setText(Helper.formatDate(calendar.getTime()));
         fetchTransactionsFromFirebase(Helper.formatDate(calendar.getTime()));
