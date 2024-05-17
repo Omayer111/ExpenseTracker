@@ -1,6 +1,8 @@
 package com.example.expensetracker.views.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,8 +23,13 @@ import com.google.firebase.database.ValueEventListener;
 public class UserProfile extends AppCompatActivity {
 
     private TextView name, email, dob, mobile, password;
-    private String dname,demail,ddob,dmobile,dpassword;
+    private String dname, demail, ddob, dmobile, dpassword;
     private ImageView imageView;
+    private Button logoutButton;
+
+
+    private static final int PICK_IMAGE_REQUEST = 1;
+
 
     private FirebaseAuth mAuth;
     private DatabaseReference userRef;
@@ -40,35 +47,35 @@ public class UserProfile extends AppCompatActivity {
         dob = findViewById(R.id.textView_show_dob);
         mobile = findViewById(R.id.textView_show_mobile);
         password = findViewById(R.id.textView_show_password);
+        logoutButton = findViewById(R.id.button_logout);
+
+
+        mAuth = firebaseAuth.getInstance();
+
 
         // Get reference to "Users" node in the database
-
-
-        FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+        FirebaseUser firebaseUser = mAuth.getCurrentUser();
         if (firebaseUser != null) {
             // Get the UID of the current user
-
-
-            // Get reference to the node for the specific user using their UID
             String userID = firebaseUser.getUid();
             DatabaseReference referenceProfile = FirebaseDatabase.getInstance().getReference("Users").child(userID);
-            referenceProfile.addListenerForSingleValueEvent(new ValueEventListener()  {
+            referenceProfile.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     if (snapshot.exists()) {
                         ReadWriteUserDetails readWriteUserDetails = snapshot.getValue(ReadWriteUserDetails.class);
                         if (readWriteUserDetails != null) {
-                            dname = readWriteUserDetails.name;
-                            demail = readWriteUserDetails.email;
                             ddob = readWriteUserDetails.dob;
+                            demail = readWriteUserDetails.email;
                             dmobile = readWriteUserDetails.mobile;
+                            dname = readWriteUserDetails.name;
                             dpassword = readWriteUserDetails.password;
 
-                            name.setText(dname);
-                            email.setText(demail);
-                            dob.setText(ddob);
-                            mobile.setText(dmobile);
-                            password.setText(dpassword);
+                            name.setText("Email: " + demail);
+                            email.setText("Name: " +  dname);
+                            dob.setText("Mobile: " + ddob);
+                            mobile.setText("Password: " + dmobile ddob );
+                            password.setText("DOB: " + dpassword);
                         } else {
                             Toast.makeText(UserProfile.this, "User data is null", Toast.LENGTH_SHORT).show();
                         }
@@ -77,10 +84,17 @@ public class UserProfile extends AppCompatActivity {
                     }
                 }
 
-
                 @Override
                 public void onCancelled(@NonNull DatabaseError error) {
-                    Toast.makeText(UserProfile.this, "sorry didnt' work", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UserProfile.this, "Sorry, didn't work", Toast.LENGTH_SHORT).show();
                 }
             });
-        }}}
+        }
+
+        logoutButton.setOnClickListener(v -> {
+            mAuth.signOut();
+            startActivity(new Intent(UserProfile.this, auth_first_page.class));
+            finish();
+        });
+    }
+}

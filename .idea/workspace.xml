@@ -18,7 +18,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75426e41-e4d8-46ed-9df9-1297bb0ff3a1" name="Changes" comment="fixed the UI and applied singleton" />
+    <list default="true" id="75426e41-e4d8-46ed-9df9-1297bb0ff3a1" name="Changes" comment="fixed the UI and applied singleton">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -248,7 +250,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715945899267</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fixed the UI and applied singleton">
+      <option name="closed" value="true" />
+      <created>1715945975134</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715945975134</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
