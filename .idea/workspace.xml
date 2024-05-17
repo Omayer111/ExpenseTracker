@@ -20,11 +20,7 @@
   <component name="ChangeListManager">
     <list default="true" id="75426e41-e4d8-46ed-9df9-1297bb0ff3a1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/8.4/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/8.4/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/8.4/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/8.4/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/8.4/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/8.4/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/8.4/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/8.4/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/8.4/dependencies-accessors/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/8.4/dependencies-accessors/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/8.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/8.4/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/8.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/8.4/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/8.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/8.4/fileHashes/fileHashes.bin" afterDir="false" />
@@ -32,7 +28,16 @@
       <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/8.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/8.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/Adapters/TransactionsAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/Adapters/TransactionsAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/Model/Expense.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/Model/Expense.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/Model/Income.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/Model/Income.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/Model/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/Model/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/Model/TransactionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/Model/TransactionFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/utils/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/views/activities/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/views/activities/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/views/activities/register.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/views/activities/register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/views/fragments/Add_Transaction_Fragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/java/com/example/expensetracker/views/fragments/Add_Transaction_Fragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ExpenseTracker-master/app/src/main/res/layout/activity_main.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +47,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\USER\.android\avd\Pixel_7a_Edited_API_34.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\HP\.android\avd\Pixel_4_API_31.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$/ExpenseTracker-master">
       <ProjectState />
@@ -69,13 +74,28 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="layoutResourceFile" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="Profile_Omayer" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/ExpenseTracker-master" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -91,23 +111,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;ScreenRecorder.SavePath&quot;: &quot;C:\\Users\\USER\\Desktop&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/USER/ExpenseTracker/ExpenseTracker-master/app/src/main/java/com/example/expensetracker&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/USER/ExpenseTracker&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_directory_selection": "C:/Users/USER/ExpenseTracker/ExpenseTracker-master/app/src/main/java/com/example/expensetracker",
+    "last_opened_file_path": "D:/3-1/omayer/ExpenseTracker",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.example.expensetracker.views.activities" />
