@@ -63,7 +63,7 @@ public class register extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mAuth = FirebaseAuth.getInstance();
+        mAuth = firebaseAuth.getInstance();
         setContentView(R.layout.activity_register);
 
 
@@ -137,7 +137,7 @@ public class register extends AppCompatActivity {
 
                                     databaseReference.child(user.getUid()).setValue(readWriteUserDetails).addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
-                                        public void onComplete(@NonNull Task<Void>task) {
+                                        public void onComplete(@NonNull Task<Void> task) {
                                             if(task.isSuccessful()){
                                                 Toast.makeText(register.this, "User Registered Successfully", Toast.LENGTH_SHORT).show();
                                                 Intent intent = new Intent(register.this, login.class);

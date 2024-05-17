@@ -29,6 +29,7 @@ public class login extends AppCompatActivity {
 
     private Button loginKey;
 
+
     private FirebaseAuth mAuth;
 
     @Override
@@ -37,7 +38,8 @@ public class login extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
 
-        mAuth = FirebaseAuth.getInstance();
+        mAuth = firebaseAuth.getInstance();
+
 
         loginKey = findViewById(R.id.button_login);
 
