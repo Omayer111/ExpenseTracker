@@ -126,7 +126,7 @@ public class TransactionsAdapter extends RecyclerView.Adapter<TransactionsAdapte
             public void onCancelled(@NonNull DatabaseError error) {
                 // Handle data retrieval cancellation or error
                 Log.e("MainActivity", "Error fetching transactions: " + error.getMessage());
-               // Toast.makeText(MainActivity.this, "Failed to fetch transactions", Toast.LENGTH_SHORT).show();
+                // Toast.makeText(MainActivity.this, "Failed to fetch transactions", Toast.LENGTH_SHORT).show();
             }
         });
     }
