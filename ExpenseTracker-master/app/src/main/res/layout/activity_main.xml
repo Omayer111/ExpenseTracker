@@ -202,7 +202,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="April 2,2024"
+            android:text="May 18,2024"
             android:textColor="@color/white"
             android:textSize="16sp" />
 
