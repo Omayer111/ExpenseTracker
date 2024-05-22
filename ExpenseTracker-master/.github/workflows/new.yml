@@ -2,9 +2,9 @@ name: new
 
 on:
   pull_request:
-    branches: [Profile_Omayer]
+    branches: [main]
   push:
-    branches: [Profile_Omayer]
+    branches: [main]
 
 jobs:
   build:
