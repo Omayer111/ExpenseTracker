@@ -26,10 +26,9 @@ public class UserProfile extends AppCompatActivity {
     private String dname, demail, ddob, dmobile, dpassword;
     private ImageView imageView;
     private Button logoutButton;
-
+    private Button backButton;
 
     private static final int PICK_IMAGE_REQUEST = 1;
-
 
     private FirebaseAuth mAuth;
     private DatabaseReference userRef;
@@ -46,12 +45,10 @@ public class UserProfile extends AppCompatActivity {
         email = findViewById(R.id.textView_show_email);
         dob = findViewById(R.id.textView_show_dob);
         mobile = findViewById(R.id.textView_show_mobile);
-        password = findViewById(R.id.textView_show_password);
         logoutButton = findViewById(R.id.button_logout);
+        backButton = findViewById(R.id.button_back);
 
-
-        mAuth = firebaseAuth.getInstance();
-
+        mAuth = FirebaseAuth.getInstance();
 
         // Get reference to "Users" node in the database
         FirebaseUser firebaseUser = mAuth.getCurrentUser();
@@ -73,9 +70,8 @@ public class UserProfile extends AppCompatActivity {
 
                             name.setText("Email: " + demail);
                             email.setText("Name: " +  dname);
-                            dob.setText("Mobile: " + ddob);
-                            mobile.setText("Password: " + dmobile ddob );
-                            password.setText("DOB: " + dpassword);
+                            dob.setText("DOB: " + ddob);
+                            mobile.setText("Mobile: " + dmobile);
                         } else {
                             Toast.makeText(UserProfile.this, "User data is null", Toast.LENGTH_SHORT).show();
                         }
@@ -94,6 +90,11 @@ public class UserProfile extends AppCompatActivity {
         logoutButton.setOnClickListener(v -> {
             mAuth.signOut();
             startActivity(new Intent(UserProfile.this, auth_first_page.class));
+            finish();
+        });
+
+        backButton.setOnClickListener(v -> {
+            startActivity(new Intent(UserProfile.this, MainActivity.class));
             finish();
         });
     }
