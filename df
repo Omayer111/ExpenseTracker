@@ -1,0 +1,176 @@
+[33mcommit 09726ec72a9189c391122fa6ddd2fd3ed59e87d8[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Abu Omayer <abuomayer.111@gmail.com>
+Date:   Wed May 22 13:40:27 2024 +0600
+
+    fixed database
+
+[33mcommit 2390ef7b093967c7a8cd654578fb35629ebb1282[m
+Merge: 31155b0 7bdfa65
+Author: Abu Omayer <abuomayer.111@gmail.com>
+Date:   Wed May 22 12:54:44 2024 +0600
+
+    update
+
+[33mcommit 31155b020f26c592dded16362636e3958d5bafac[m
+Author: Abu Omayer <abuomayer.111@gmail.com>
+Date:   Wed May 22 12:45:18 2024 +0600
+
+    all the bits and pieces
+
+[33mcommit 7bdfa65a8cc1a0565e8fcbe733259e392cfb140f[m[33m ([m[1;31morigin/Profile_Omayer[m[33m)[m
+Author: Md.Umar Faruk <127825020+Faruk982@users.noreply.github.com>
+Date:   Wed May 22 10:25:02 2024 +0600
+
+    Update UserProfile.java dob removed
+
+[33mcommit 48b8d9bd7c68806dfa1dc0de21f7e23fd932b8ff[m
+Merge: 1917d59 9d6e212
+Author: faruk <faruk2007016@stud.kuet.ac.bd>
+Date:   Tue May 21 20:46:03 2024 +0600
+
+    Merge remote-tracking branch 'origin/Profile_Omayer'
+
+[33mcommit 9d6e212a3748acd05441ad0886224c85e17a98a8[m
+Author: Abu Omayer <abuomayer.111@gmail.com>
+Date:   Fri May 17 18:02:41 2024 +0600
+
+    fixed UI and applied singleton
+
+[33mcommit a28da6988565253076bba26648befcf9dba2de12[m
+Author: Abu Omayer <abuomayer.111@gmail.com>
+Date:   Fri May 17 17:41:03 2024 +0600
+
+    fixed some issues
+
+[33mcommit 4c75eef8969b676b771c86c5c9f369261cc7adb1[m
+Author: Abu Omayer <abuomayer.111@gmail.com>
+Date:   Fri May 17 17:39:27 2024 +0600
+
+    fixed the UI and applied singleton
+
+[33mcommit 86cc7ddb3f5dbb7d8860292bc87394488a0435e4[m
+Author: Abu Omayer <abuomayer.111@gmail.com>
+Date:   Fri May 17 17:38:11 2024 +0600
+
+    fixed the UI and applied singleton
+
+[33mcommit e1c8f439b0f8b519caaac50fe2940d01d1491b95[m
+Merge: b8b3cd7 abaaf59
+Author: Abu Omayer <abuomayer.111@gmail.com>
+Date:   Fri May 17 17:19:46 2024 +0600
+
+    Merge branch 'Transaction_Faruk' of https://github.com/Omayer111/ExpenseTracker into Profile_Omayer
+    
+    # Conflicts:
+    #       .idea/workspace.xml
+    #       ExpenseTracker-master/.gradle/8.4/checksums/checksums.lock
+    #       ExpenseTracker-master/.gradle/8.4/checksums/md5-checksums.bin
+    #       ExpenseTracker-master/.gradle/8.4/checksums/sha1-checksums.bin
+    #       ExpenseTracker-master/.gradle/8.4/dependencies-accessors/dependencies-accessors.lock
+    #       ExpenseTracker-master/.gradle/8.4/executionHistory/executionHistory.bin
+    #       ExpenseTracker-master/.gradle/8.4/executionHistory/executionHistory.lock
+    #       ExpenseTracker-master/.gradle/8.4/fileHashes/fileHashes.bin
+    #       ExpenseTracker-master/.gradle/8.4/fileHashes/fileHashes.lock
+    #       ExpenseTracker-master/.gradle/8.4/fileHashes/resourceHashesCache.bin
+    #       ExpenseTracker-master/.gradle/buildOutputCleanup/buildOutputCleanup.lock
+    #       ExpenseTracker-master/.gradle/file-system.probe
+
+[33mcommit abaaf5934962eca1bf47d1bbaffc84546c2118a9[m
+Author: faruk <faruk2007016@stud.kuet.ac.bd>
+Date:   Sat May 11 10:26:04 2024 +0600
+
+    type lebel done
+
+[33mcommit d832dec14f1b0e34fe3197c046b3b2af239a8e7a[m
+Author: faruk <faruk2007016@stud.kuet.ac.bd>
+Date:   Sat May 11 09:55:51 2024 +0600
+
+    final one
+
+[33mcommit b8b3cd748e5ed2e547baf2df042cd939d22e54d9[m
+Author: Abu Omayer <abuomayer.111@gmail.com>
+Date:   Fri May 10 21:11:02 2024 +0600
+
+    updated realtime database
+
+[33mcommit a7e796b9c540fae3b6643a4dde6a104c01412fec[m
+Author: Abu Omayer <abuomayer.111@gmail.com>
+Date:   Mon Apr 8 21:54:12 2024 +0600
+
+    Profile work done
+
+[33mcommit b771176fbfd9fd6884878c1f3b11001f23e6229d[m
+Author: Abu Omayer <abuomayer.111@gmail.com>
+Date:   Mon Apr 8 18:49:41 2024 +0600
+
+    okay
+
+[33mcommit 9e69b45ce130245198c0a2393272d7ffa6974027[m
+Merge: d7f2b79 24b5a7f
+Author: Abu Omayer <abuomayer.111@gmail.com>
+Date:   Mon Apr 8 18:43:41 2024 +0600
+
+    Merge branch 'Layout_Polok' of https://github.com/Omayer111/ExpenseTracker into Profile_Omayer
+
+[33mcommit 24b5a7f998ae524d0987934910ee64bd107c597f[m[33m ([m[1;31morigin/Layout_Polok[m[33m)[m
+Author: “Polok004” <“polok2007004@stud.kuet.ac.bd”>
+Date:   Wed Apr 3 15:24:22 2024 +0600
+
+    New Main Layout Created
+
+[33mcommit e0070474b527fb338d7edf21daba8e87d5fcd0e4[m
+Author: “Polok004” <“polok2007004@stud.kuet.ac.bd”>
+Date:   Wed Apr 3 14:30:50 2024 +0600
+
+    Main Layout Created Succesfully
+
+[33mcommit 1917d598b98f75c27a1b0528cb035b6c7734c88a[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 899b18b d7f2b79
+Author: Abu Omayer <abuomayer111@gmail.com>
+Date:   Tue Apr 2 13:48:50 2024 +0600
+
+    Merge pull request #4 from Omayer111/Profile_Omayer
+    
+    Delete ExpenseTracker directory
+
+[33mcommit d7f2b79cbea473af3322f8df4ccfad7af8753ec6[m
+Author: Abu Omayer <abuomayer111@gmail.com>
+Date:   Tue Apr 2 13:47:45 2024 +0600
+
+    Delete ExpenseTracker directory
+
+[33mcommit 899b18b19719a434745994bac56d2ca1d890a8d8[m
+Author: Abu Omayer <abuomayer111@gmail.com>
+Date:   Tue Apr 2 13:46:27 2024 +0600
+
+    Delete ExpenseTracker directory
+
+[33mcommit 61019041d798d3421fbafd222846357a96a380f2[m
+Merge: 83af651 a6a6fb0
+Author: Abu Omayer <abuomayer111@gmail.com>
+Date:   Mon Apr 1 23:42:11 2024 +0600
+
+    Merge pull request #2 from Omayer111/Preliminary_Merge
+    
+    Preliminary merge
+
+[33mcommit a6a6fb01d338fe23088f0c38a4254a38a4f49077[m
+Merge: 83af651 b181c23
+Author: Abu Omayer <abuomayer111@gmail.com>
+Date:   Mon Apr 1 23:36:07 2024 +0600
+
+    Merge pull request #1 from Omayer111/Profile_Omayer
+    
+    Add files via upload
+
+[33mcommit b181c230a98a52f62c293cc1393c46b936159ec8[m
+Author: Abu Omayer <abuomayer111@gmail.com>
+Date:   Mon Apr 1 23:33:58 2024 +0600
+
+    Add files via upload
+
+[33mcommit 83af651a79b6508d6b9f845ba23a6ec3f21519c4[m
+Author: Abu Omayer <abuomayer111@gmail.com>
+Date:   Mon Apr 1 16:23:16 2024 +0600
+
+    Create README.md
