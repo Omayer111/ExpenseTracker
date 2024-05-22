@@ -37,11 +37,7 @@ android {
 dependencies {
 
 
-    implementation(fileTree(mapOf<String, Any>(
-        "dir" to "/Users/shoumikbarmanpolok/Library/Android/sdk/platforms/android-34",
-        "include" to listOf(".aar", ".jar"),
-        "exclude" to listOf<String>()
-    )))
+
     testImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
     androidTestImplementation ("androidx.test.espresso:espresso-idling-resource:3.4.0")
     implementation(libs.appcompat)

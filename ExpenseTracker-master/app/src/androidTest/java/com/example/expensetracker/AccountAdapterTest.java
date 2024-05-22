@@ -84,36 +84,27 @@ public class AccountAdapterTest {
 
     @Test
     public void testAccountSelection() {
-        // Launch the main activity
         ActivityScenario.launch(MainActivity.class);
 
-        // Open the Add_Transaction_Fragment
         onView(withId(R.id.floatingActionButton)).perform(click());
 
-        // Interact with views
         onView(withId(R.id.income)).perform(click());
         onView(withId(R.id.date)).perform(click());
         onView(withClassName(equalTo(DatePicker.class.getName()))).perform(setDate(2024, 5, 21));
         onView(withId(android.R.id.button1)).perform(click());
 
-        // Type amount
         onView(withId(R.id.amount)).perform(typeText("500"), closeSoftKeyboard());
 
-        // Open category dialog and select first item
         onView(withId(R.id.category)).perform(click());
         onView(withRecyclerView(R.id.recyclerView).atPosition(0)).perform(click());
         onView(withId(R.id.category)).check(matches(withText("Salary")));
 
-        // Open account dialog and select first item
         onView(withId(R.id.account)).perform(click());
         onView(withRecyclerView(R.id.recyclerView).atPosition(0)).perform(click());
         onView(withId(R.id.account)).check(matches(withText("Cash")));
 
-        // Type note and save transaction
         onView(withId(R.id.note)).perform(typeText("xyz"), closeSoftKeyboard());
         onView(withId(R.id.saveTransactionBtn)).perform(scrollTo(), click());
-
-
     }
 
 

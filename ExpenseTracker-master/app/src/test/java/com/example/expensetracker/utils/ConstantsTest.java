@@ -13,7 +13,7 @@ public class ConstantsTest {
 
     @BeforeClass
     public static void setUp() {
-        Constants.setCatagories();
+        Constants.setCategories();
     }
 
     @Test

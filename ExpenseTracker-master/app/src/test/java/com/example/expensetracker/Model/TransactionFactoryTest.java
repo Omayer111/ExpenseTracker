@@ -12,7 +12,6 @@ public class TransactionFactoryTest {
     public void testGetTransaction() {
         TransactionFactory factory = new TransactionFactory();
 
-        // Test case 1: Income transaction
         String incomeType = "INCOME";
         String category = "Salary";
         String account = "Savings";
@@ -30,7 +29,7 @@ public class TransactionFactoryTest {
         assertEquals(amount, incomeTransaction.getAmount(), 0.0);
         assertEquals(id, incomeTransaction.getId());
 
-        // Test case 2: Expense transaction
+
         String expenseType = "EXPENSE";
         category = "Food";
         account = "Checking";

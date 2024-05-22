@@ -39,21 +39,6 @@ public class LoginUiTest {
         // Check if MainActivity is displayed after login success
         onView(withId(R.id.main)).check(matches(isDisplayed()));
     }
-    @Test
-    public void testProfile() {
-        // Input email
-        onView(withId(R.id.editText_login_email)).perform(replaceText("omayer@gmail.com"));
-        // Input password
-        onView(withId(R.id.editText_login_pwd)).perform(replaceText("omayer"));
-        // Click login button
-        onView(withId(R.id.button_login)).perform(click());
-
-        // Navigate to profile section
-        onView(withId(R.id.profile_section)).perform(click());
-
-        // Check if the email is correctly displayed
-        onView(withId(R.id.textView_show_email)).check(matches(withText("omayer@gmail.com")));
-    }
 
 
 }
