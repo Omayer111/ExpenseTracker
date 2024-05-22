@@ -74,7 +74,7 @@ public class UserProfile extends AppCompatActivity {
                             name.setText("Email: " + demail);
                             email.setText("Name: " +  dname);
                             dob.setText("Mobile: " + ddob);
-                            mobile.setText("Password: " + dmobile ddob );
+                            mobile.setText("Password: " + dmobile);
                             password.setText("DOB: " + dpassword);
                         } else {
                             Toast.makeText(UserProfile.this, "User data is null", Toast.LENGTH_SHORT).show();
