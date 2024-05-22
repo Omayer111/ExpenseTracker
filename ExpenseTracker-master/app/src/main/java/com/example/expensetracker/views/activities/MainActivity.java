@@ -1,10 +1,12 @@
 package com.example.expensetracker.views.activities;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,6 +28,8 @@ import com.example.expensetracker.utils.Helper;
 import com.example.expensetracker.views.fragments.Add_Transaction_Fragment;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -46,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
     public TextView IncomePrint;
     public TextView ExpensePrint;
     public TextView TotalPrint;
+    public TextView currentDateTextView;
+    public long id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,11 +62,16 @@ public class MainActivity extends AppCompatActivity {
         IncomePrint=findViewById(R.id.IncomeLbl);
         ExpensePrint=findViewById(R.id.ExpenseLbl);
         TotalPrint=findViewById(R.id.TotalLbl);
+        currentDateTextView = findViewById(R.id.currentDate);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        //date seach
+
+
+        //end search
 
         setSupportActionBar(binding.materialToolbar2);
         getSupportActionBar().setTitle("Transaction");
@@ -80,6 +91,16 @@ public class MainActivity extends AppCompatActivity {
 
         binding.floatingActionButton.setOnClickListener(c ->{
             new Add_Transaction_Fragment().show(getSupportFragmentManager(),null);
+        });
+        binding.bottomNavigationView2.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                if (item.getItemId() == R.id.floatingActionButton2) {
+                    showDatePickerDialog();
+                    return true;
+                }
+                return false;
+            }
         });
 
         ArrayList<Transaction>transactions=new ArrayList<>();
@@ -250,4 +271,27 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+    //date search
+    private void showDatePickerDialog() {
+        DatePickerDialog datePickerDialog = new DatePickerDialog(MainActivity.this,
+                (datePicker, year, month, dayOfMonth) -> {
+                    calendar.set(Calendar.YEAR, year);
+                    calendar.set(Calendar.MONTH, month);
+                    calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                    id = calendar.getTime().getTime();
+
+                    // Format the selected date and update the currentDateTextView
+                    String formattedDate = Helper.formatDate(calendar.getTime());
+                    currentDateTextView.setText(formattedDate);
+
+                    // Fetch transactions from Firebase for the selected date
+                    fetchTransactionsFromFirebase(formattedDate);
+                }, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
+        datePickerDialog.show();
+    }
+
+
+    //end search
 }

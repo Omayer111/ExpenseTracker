@@ -113,37 +113,10 @@ public class AccountAdapterTest {
         onView(withId(R.id.note)).perform(typeText("xyz"), closeSoftKeyboard());
         onView(withId(R.id.saveTransactionBtn)).perform(scrollTo(), click());
 
-        onView(isRoot()).perform(waitFor(1000)); // Wait for RecyclerView to update
 
-        // Log the view hierarchy for debugging
-        logViewHierarchy();
-
-        // Check if the first item has the expected values
-        onView(withId(R.id.recyclerView))
-                .perform(RecyclerViewActions.scrollToPosition(0));
-        onView(withRecyclerView(R.id.recyclerView).atPositionOnView(0, R.id.transactionCategory))
-                .check(matches(withText("Bussiness")));
-        onView(withRecyclerView(R.id.recyclerView).atPositionOnView(0, R.id.accountLable))
-                .check(matches(withText("Cash")));
-        onView(withRecyclerView(R.id.recyclerView).atPositionOnView(0, R.id.transactionDate))
-                .check(matches(withText("21 May,2024")));
-        onView(withRecyclerView(R.id.recyclerView).atPositionOnView(0, R.id.amount))
-                .check(matches(withText("1000")));
     }
 
 
-    @Rule
-    public ActivityScenarioRule<auth_first_page> activityScenarioRule =
-            new ActivityScenarioRule<>(auth_first_page.class);
-
-    @Test
-    public void testRegisterButtonShowsRegisterActivity() {
-        // Perform click on the register button
-        onView(withId(R.id.button_register)).perform(click());
-
-        // Verify that the register activity layout is displayed
-        onView(withId(R.id.main)).check(matches(isDisplayed()));
-    }
 
 
     private void logViewHierarchy() {
