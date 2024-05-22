@@ -26,4 +26,8 @@ public class UiTestProfile {
         // Verify that the register activity layout is displayed
         onView(withId(R.id.main)).check(matches(isDisplayed()));
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 820a71f6f288af9870cc926d62deed53b6563931

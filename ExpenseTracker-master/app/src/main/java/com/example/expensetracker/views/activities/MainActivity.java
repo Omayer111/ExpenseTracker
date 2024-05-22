@@ -1,5 +1,6 @@
 package com.example.expensetracker.views.activities;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -26,6 +27,7 @@ import com.example.expensetracker.utils.Helper;
 import com.example.expensetracker.views.fragments.Add_Transaction_Fragment;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -40,11 +42,13 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.concurrent.CountDownLatch;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  {
     ActivityMainBinding binding;
     Calendar calendar;
     TextView IncomePrint,ExpensePrint,TotalPrint;
-
+    public TextView currentDateTextView;
+    public long id;
+    public int transactionSize=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         IncomePrint=findViewById(R.id.IncomeLbl);
         ExpensePrint=findViewById(R.id.ExpenseLbl);
         TotalPrint=findViewById(R.id.TotalLbl);
+        currentDateTextView = findViewById(R.id.currentDate);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -79,7 +84,26 @@ public class MainActivity extends AppCompatActivity {
         binding.floatingActionButton.setOnClickListener(c ->{
             new Add_Transaction_Fragment().show(getSupportFragmentManager(),null);
         });
-
+        binding.bottomNavigationView2.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                if (item.getItemId() == R.id.floatingActionButton2) {
+                    showDatePickerDialog();
+                    return true;
+                }
+                else if(item.getItemId()==R.id.refresh){
+                    updateDate();
+                    return  true;
+                } else if (item.getItemId() == R.id.logouttt) {
+                    FirebaseAuth.getInstance().signOut();
+                    Intent intent = new Intent(MainActivity.this, login.class);
+                    startActivity(intent);
+                    finish();
+                    return true;
+                }
+                return false;
+            }
+        });
         ArrayList<Transaction>transactions=new ArrayList<>();
         TransactionFactory transactionFactory=new TransactionFactory();
         // transactions.add(transactionFactory.getTransaction(Constants.INCOME,"Bank","Cash","Hello", Helper.formatDate(new Date()),500,2));
@@ -247,5 +271,22 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    private void showDatePickerDialog() {
+        DatePickerDialog datePickerDialog = new DatePickerDialog(MainActivity.this,
+                (datePicker, year, month, dayOfMonth) -> {
+                    calendar.set(Calendar.YEAR, year);
+                    calendar.set(Calendar.MONTH, month);
+                    calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                    long id = calendar.getTime().getTime();
+
+                    // Format the selected date and update the currentDateTextView
+                    String formattedDate = Helper.formatDate(calendar.getTime());
+                    currentDateTextView.setText(formattedDate);
+
+                    // Fetch transactions from Firebase for the selected date
+                    fetchTransactionsFromFirebase(formattedDate);
+                }, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
+        datePickerDialog.show();
     }
 }
