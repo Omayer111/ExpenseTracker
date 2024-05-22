@@ -193,7 +193,10 @@
                         android:layout_height="wrap_content"
                         android:text="@string/register"
                         android:textColor="@color/purple_700"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:clickable="true"
+                        android:focusable="true"
+                        />
                 </LinearLayout>
 
 

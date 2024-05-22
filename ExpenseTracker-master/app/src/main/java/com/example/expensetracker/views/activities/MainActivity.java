@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +29,7 @@ import com.example.expensetracker.views.fragments.Add_Transaction_Fragment;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -42,13 +44,15 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.concurrent.CountDownLatch;
 
-public class MainActivity extends AppCompatActivity  {
-    ActivityMainBinding binding;
+public class MainActivity extends AppCompatActivity {
+    public ActivityMainBinding binding;
     Calendar calendar;
-    TextView IncomePrint,ExpensePrint,TotalPrint;
+    public TextView IncomePrint;
+    public TextView ExpensePrint;
+    public TextView TotalPrint;
     public TextView currentDateTextView;
     public long id;
-    public int transactionSize=0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,10 +68,14 @@ public class MainActivity extends AppCompatActivity  {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        //date seach
+
+
+        //end search
 
         setSupportActionBar(binding.materialToolbar2);
         getSupportActionBar().setTitle("Transaction");
-        Constants.setCatagories();
+        Constants.setCategories();
         calendar=Calendar.getInstance();
         updateDate();
 
@@ -91,19 +99,10 @@ public class MainActivity extends AppCompatActivity  {
                     showDatePickerDialog();
                     return true;
                 }
-                else if(item.getItemId()==R.id.refresh){
-                    updateDate();
-                    return  true;
-                } else if (item.getItemId() == R.id.logouttt) {
-                    FirebaseAuth.getInstance().signOut();
-                    Intent intent = new Intent(MainActivity.this, login.class);
-                    startActivity(intent);
-                    finish();
-                    return true;
-                }
                 return false;
             }
         });
+
         ArrayList<Transaction>transactions=new ArrayList<>();
         TransactionFactory transactionFactory=new TransactionFactory();
         // transactions.add(transactionFactory.getTransaction(Constants.INCOME,"Bank","Cash","Hello", Helper.formatDate(new Date()),500,2));
@@ -173,8 +172,12 @@ public class MainActivity extends AppCompatActivity  {
 //
 //        return ;//transactions; // Return the fetched transactions
 //    }
-
-    void fetchTransactionsFromFirebase(String fetchinDate) {
+    /**
+     * Fetches transactions from Firebase for a specified date and updates the UI accordingly.
+     *
+     * @param fetchinDate The date for which transactions need to be fetched.
+     */
+    public void fetchTransactionsFromFirebase(String fetchinDate) {
         ArrayList<Transaction> transactions = new ArrayList<>();
         final double[] Income = {0.0};
         final double[] Expense = {0.0};
@@ -245,6 +248,11 @@ public class MainActivity extends AppCompatActivity  {
         });
     }
 
+    /**
+     * Updates the current date in the UI and fetches transactions for the updated date from Firebase.
+     * It sets the formatted current date in the appropriate TextView and then calls the method
+     * {@link #fetchTransactionsFromFirebase(String)} to fetch transactions for the updated date.
+     */
     public void updateDate(){
 //        SimpleDateFormat dateFormat=new SimpleDateFormat("dd MMMM,YYYY");
         binding.currentDate.setText(Helper.formatDate(calendar.getTime()));
@@ -257,6 +265,12 @@ public class MainActivity extends AppCompatActivity  {
         return super.onCreateOptionsMenu(menu);
     }
 
+    /**
+     * Handles options menu item selection.
+     *
+     * @param item The selected menu item.
+     * @return True if the menu item selection is handled successfully, false otherwise.
+     */
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
@@ -272,13 +286,20 @@ public class MainActivity extends AppCompatActivity  {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+    //date search
+    /**
+     * Shows a date picker dialog to select a date.
+     * Upon selecting a date, updates the current date, sets it to the text view, and fetches transactions for the selected date from Firebase.
+     */
     private void showDatePickerDialog() {
         DatePickerDialog datePickerDialog = new DatePickerDialog(MainActivity.this,
                 (datePicker, year, month, dayOfMonth) -> {
                     calendar.set(Calendar.YEAR, year);
                     calendar.set(Calendar.MONTH, month);
                     calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-                    long id = calendar.getTime().getTime();
+                    id = calendar.getTime().getTime();
 
                     // Format the selected date and update the currentDateTextView
                     String formattedDate = Helper.formatDate(calendar.getTime());
@@ -289,4 +310,7 @@ public class MainActivity extends AppCompatActivity  {
                 }, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
         datePickerDialog.show();
     }
+
+
+    //end search
 }

@@ -26,8 +26,15 @@ public class UiTestProfile {
         // Verify that the register activity layout is displayed
         onView(withId(R.id.main)).check(matches(isDisplayed()));
     }
-<<<<<<< HEAD
+
+    @Test
+    public void testRegisterButtonShowsLoginActivity() {
+        // Perform click on the register button
+        onView(withId(R.id.button_login)).perform(click());
+
+        // Verify that the register activity layout is displayed
+        onView(withId(R.id.main)).check(matches(isDisplayed()));
+    }
+
 }
-=======
-}
->>>>>>> 820a71f6f288af9870cc926d62deed53b6563931
+

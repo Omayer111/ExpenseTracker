@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -28,6 +29,7 @@ public class login extends AppCompatActivity {
 
 
     private Button loginKey;
+    private TextView textViewRegisterLink;
 
 
     private FirebaseAuth mAuth;
@@ -37,6 +39,16 @@ public class login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
+
+        textViewRegisterLink = findViewById(R.id.textView_register_link);
+
+        textViewRegisterLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(login.this, register.class);
+                startActivity(intent);
+            }
+        });
 
         mAuth = firebaseAuth.getInstance();
 

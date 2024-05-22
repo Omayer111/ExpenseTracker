@@ -32,7 +32,9 @@ import android.widget.DatePicker;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
-
+/**
+ * Activity for user registration.
+ */
 public class register extends AppCompatActivity {
 
     private EditText editTextRegisterName, editTextRegisterEmail, editTextRegisterDob, editTextRegisterMobile, editTextRegisterPwd, editTextRegisterConfirmPwd;

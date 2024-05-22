@@ -20,6 +20,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+/**
+ * this is userprofile
+ */
 public class UserProfile extends AppCompatActivity {
 
     private TextView name, email, dob, mobile, password;

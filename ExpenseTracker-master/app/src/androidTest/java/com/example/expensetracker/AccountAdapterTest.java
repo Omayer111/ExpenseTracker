@@ -117,18 +117,6 @@ public class AccountAdapterTest {
     }
 
 
-    @Rule
-    public ActivityScenarioRule<auth_first_page> activityScenarioRule =
-            new ActivityScenarioRule<>(auth_first_page.class);
-
-    @Test
-    public void testRegisterButtonShowsRegisterActivity() {
-        // Perform click on the register button
-        onView(withId(R.id.button_register)).perform(click());
-
-        // Verify that the register activity layout is displayed
-        onView(withId(R.id.main)).check(matches(isDisplayed()));
-    }
 
 
     private void logViewHierarchy() {
