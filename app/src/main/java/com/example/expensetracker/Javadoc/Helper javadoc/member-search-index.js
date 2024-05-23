@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"com.example.expensetracker.utils","c":"Helper","l":"formatDate(Date)","u":"formatDate(java.util.Date)"},{"p":"com.example.expensetracker.utils","c":"Helper","l":"formatDateByMonth(Date)","u":"formatDateByMonth(java.util.Date)"},{"p":"com.example.expensetracker.utils","c":"Helper","l":"Helper()","u":"%3Cinit%3E()"}];updateSearchResults();

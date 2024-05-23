@@ -1,0 +1,6 @@
+com.example.expensetracker
+com.example.expensetracker.Adapters
+com.example.expensetracker.Model
+com.example.expensetracker.utils
+com.example.expensetracker.views.activities
+com.example.expensetracker.views.fragments

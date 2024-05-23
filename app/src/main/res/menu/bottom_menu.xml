@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/transactions"
+        android:icon="@drawable/baseline_auto_stories_24"
+        android:title="Transaction" />
+
+    <item
+        android:id="@+id/floatingActionButton2"
+        android:icon="@drawable/baseline_calendar_month_24"
+        android:title="Calendar" />
+
+    <item
+        android:id="@+id/refresh"
+        android:icon="@drawable/baseline_change_circle_24"
+        android:title="Refresh" />
+
+    <item
+        android:id="@+id/logouttt"
+        android:icon="@drawable/baseline_logout_24"
+        android:title="Logout" />
+</menu>

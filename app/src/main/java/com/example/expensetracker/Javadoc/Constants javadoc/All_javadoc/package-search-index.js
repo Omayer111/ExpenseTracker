@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.example.expensetracker"},{"l":"com.example.expensetracker.Adapters"},{"l":"com.example.expensetracker.Model"},{"l":"com.example.expensetracker.utils"},{"l":"com.example.expensetracker.views.activities"},{"l":"com.example.expensetracker.views.fragments"}];updateSearchResults();
