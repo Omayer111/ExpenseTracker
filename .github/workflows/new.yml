@@ -3,10 +3,10 @@ name: new
 on:
   push:
     branches:
-      - Transaction_Faruk
+      - main
   pull_request:
     branches:
-      - Transaction_Faruk
+      - main
 
 jobs:
   build:
@@ -27,13 +27,9 @@ jobs:
         with:
           node-version: '14'
 
-      # List files in the root directory to verify the project structure
-      - name: List files in root directory
-        run: ls
-
       # Change to the project directory
       - name: Change to project directory
-        run: cd ExpenseTracker-master
+        run: cd D:/Main/ExpenseTracker/ExpenseTracker-master
 
       # Grant execute permissions to gradlew script
       - name: Grant execute permissions to gradlew
