@@ -1,4 +1,4 @@
-name: new
+name: CI
 
 on:
   push:
@@ -27,9 +27,9 @@ jobs:
         with:
           node-version: '14'
 
-      # Change to the project directory
-      - name: Change to project directory
-        run: cd ExpenseTracker/ExpenseTracker-master
+      # List files in the root directory to verify the project structure
+      - name: List files in root directory
+        run: ls
 
       # Grant execute permissions to gradlew script
       - name: Grant execute permissions to gradlew
