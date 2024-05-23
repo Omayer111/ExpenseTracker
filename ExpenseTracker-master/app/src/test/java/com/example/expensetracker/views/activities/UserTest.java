@@ -16,26 +16,26 @@ public class UserTest {
 
     @Test
     public void testGetName() {
-        user.setName("John Doe");
-        assertEquals("John Doe", user.getName());
+        user.setName("polok");
+        assertEquals("polok", user.getName());
     }
 
     @Test
     public void testSetName() {
-        user.setName("Jane Doe");
-        assertEquals("Jane Doe", user.getName());
+        user.setName("polok");
+        assertEquals("polok", user.getName());
     }
 
     @Test
     public void testGetEmail() {
-        user.setEmail("john.doe@example.com");
-        assertEquals("john.doe@example.com", user.getEmail());
+        user.setEmail("polok@gmail.com");
+        assertEquals("polok@gmail.com", user.getEmail());
     }
 
     @Test
     public void testSetEmail() {
-        user.setEmail("jane.doe@example.com");
-        assertEquals("jane.doe@example.com", user.getEmail());
+        user.setEmail("polok@gmail.com");
+        assertEquals("polok@gmail.com", user.getEmail());
     }
 
     @Test
@@ -52,14 +52,14 @@ public class UserTest {
 
     @Test
     public void testGetMobile() {
-        user.setMobile("1234567890");
-        assertEquals("1234567890", user.getMobile());
+        user.setMobile("017234567890");
+        assertEquals("017234567890", user.getMobile());
     }
 
     @Test
     public void testSetMobile() {
-        user.setMobile("0987654321");
-        assertEquals("0987654321", user.getMobile());
+        user.setMobile("01987654321");
+        assertEquals("01987654321", user.getMobile());
     }
 
     @Test

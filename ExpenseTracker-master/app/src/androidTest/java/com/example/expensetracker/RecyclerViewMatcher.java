@@ -35,26 +35,5 @@ public class RecyclerViewMatcher {
             }
         };
     }
-    public Matcher<View> atPositionOnView(final int position, final int targetViewId) {
-        return new TypeSafeMatcher<View>() {
-            @Override
-            public void describeTo(Description description) {
-                description.appendText("has view id " + targetViewId + " at position: " + position);
-            }
 
-            @Override
-            protected boolean matchesSafely(View view) {
-                if (!(view.getParent() instanceof RecyclerView)) {
-                    return false;
-                }
-                RecyclerView recyclerView = (RecyclerView) view.getParent();
-                RecyclerView.ViewHolder viewHolder = recyclerView.findViewHolderForAdapterPosition(position);
-                if (viewHolder == null) {
-                    return false;
-                }
-                View targetView = viewHolder.itemView.findViewById(targetViewId);
-                return view == targetView;
-            }
-        };
-    }
 }
