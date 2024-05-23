@@ -27,6 +27,10 @@ jobs:
         with:
           node-version: '14'
 
+      # Change to the project directory
+      - name: Change to project directory
+        run: cd ExpenseTracker-master
+
       # Run unit tests with Gradle
       - name: Run Unit Tests
         run: ./gradlew test
