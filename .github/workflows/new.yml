@@ -1,4 +1,4 @@
-name: CI
+name: new
 
 on:
   push:
@@ -30,6 +30,10 @@ jobs:
       # List files in the root directory to verify the project structure
       - name: List files in root directory
         run: ls
+
+      # Change to the project directory
+      - name: Change to project directory
+        run: cd ExpenseTracker/ExpenseTracker-master
 
       # Grant execute permissions to gradlew script
       - name: Grant execute permissions to gradlew
