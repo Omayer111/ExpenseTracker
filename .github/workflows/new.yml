@@ -29,7 +29,7 @@ jobs:
 
       # Change to the project directory
       - name: Change to project directory
-        run: cd ExpenseTracker-master
+        run: cd ExpenseTracker/ExpenseTracker-master
 
       # Grant execute permissions to gradlew script
       - name: Grant execute permissions to gradlew
