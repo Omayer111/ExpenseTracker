@@ -26,3 +26,11 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '14'
+
+      # Run unit tests with Gradle
+      - name: Run Unit Tests
+        run: ./gradlew test
+
+      # Run UI tests with Gradle (if applicable)
+      - name: Run UI Tests
+        run: ./gradlew connectedAndroidTest
