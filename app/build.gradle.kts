@@ -46,11 +46,6 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("com.google.firebase:firebase-auth:21.0.1")
     implementation("com.google.firebase:firebase-database:20.0.3")
-    implementation(fileTree(mapOf<String, Any>(
-        "dir" to "C:\\Users\\HP\\AppData\\Local\\Android\\Sdk\\platforms\\android-34",
-        "include" to listOf("*.aar", "*.jar"),
-        "exclude" to listOf<String>()
-    )))
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
