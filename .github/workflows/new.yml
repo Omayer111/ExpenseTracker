@@ -31,6 +31,10 @@ jobs:
       - name: Change to project directory
         run: cd ExpenseTracker-master
 
+      # Grant execute permissions to gradlew script
+      - name: Grant execute permissions to gradlew
+        run: chmod +x gradlew
+
       # Run unit tests with Gradle
       - name: Run Unit Tests
         run: ./gradlew test
