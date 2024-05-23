@@ -92,11 +92,21 @@ public class MainActivity extends AppCompatActivity {
         binding.floatingActionButton.setOnClickListener(c ->{
             new Add_Transaction_Fragment().show(getSupportFragmentManager(),null);
         });
-        binding.bottomNavigationView2.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+       binding.bottomNavigationView2.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 if (item.getItemId() == R.id.floatingActionButton2) {
                     showDatePickerDialog();
+                    return true;
+                }
+                else if(item.getItemId()==R.id.refresh){
+                    updateDate();
+                    return  true;
+                } else if (item.getItemId() == R.id.logouttt) {
+                    FirebaseAuth.getInstance().signOut();
+                    Intent intent = new Intent(MainActivity.this, login.class);
+                    startActivity(intent);
+                    finish();
                     return true;
                 }
                 return false;
