@@ -60,27 +60,7 @@ public class AccountAdapterTest {
     @Rule
     public ActivityScenarioRule<MainActivity> activityRule = new ActivityScenarioRule<>(MainActivity.class);
 
-    private CountingIdlingResource countingIdlingResource = new CountingIdlingResource("Global");
 
-    @Before
-    public void setUp() {
-        IdlingRegistry.getInstance().register(countingIdlingResource);
-        disableAnimations();
-    }
-
-    @After
-    public void tearDown() {
-        IdlingRegistry.getInstance().unregister(countingIdlingResource);
-    }
-
-    private void disableAnimations() {
-        InstrumentationRegistry.getInstrumentation().getUiAutomation().executeShellCommand(
-                "settings put global transition_animation_scale 0");
-        InstrumentationRegistry.getInstrumentation().getUiAutomation().executeShellCommand(
-                "settings put global window_animation_scale 0");
-        InstrumentationRegistry.getInstrumentation().getUiAutomation().executeShellCommand(
-                "settings put global animator_duration_scale 0");
-    }
 
     @Test
     public void testAccountSelection() {
@@ -110,48 +90,7 @@ public class AccountAdapterTest {
 
 
 
-    private void logViewHierarchy() {
-        try {
-            ViewInteraction interaction = onView(withId(android.R.id.content));
-            interaction.perform(new ViewAction() {
-                @Override
-                public Matcher<View> getConstraints() {
-                    return isRoot();
-                }
 
-                @Override
-                public String getDescription() {
-                    return "Logging view hierarchy";
-                }
 
-                @Override
-                public void perform(UiController uiController, View view) {
-                    for (View child : TreeIterables.breadthFirstViewTraversal(view)) {
-                        Log.d("ViewHierarchy", child.toString());
-                    }
-                }
-            });
-        } catch (NoMatchingViewException e) {
-            Log.e("ViewHierarchy", "No matching view found", e);
-        }
-    }
 
-    public static ViewAction waitFor(final long delay) {
-        return new ViewAction() {
-            @Override
-            public Matcher<View> getConstraints() {
-                return isRoot();
-            }
-
-            @Override
-            public String getDescription() {
-                return "wait for " + delay + " milliseconds";
-            }
-
-            @Override
-            public void perform(UiController uiController, View view) {
-                uiController.loopMainThreadForAtLeast(delay);
-            }
-        };
-    }
 }

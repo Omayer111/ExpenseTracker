@@ -47,7 +47,7 @@ public class TransactionFactoryTest {
         assertEquals(amount, expenseTransaction.getAmount(), 0.0);
         assertEquals(id, expenseTransaction.getId());
 
-        // Test case 3: Null transaction type
+
         String nullType = null;
         Transaction nullTransaction = factory.getTransaction(nullType, category, account, note, date, amount, id);
         assertNull(nullTransaction);

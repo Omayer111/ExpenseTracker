@@ -5,9 +5,6 @@
       <entry key="LoginUiTest">
         <State />
       </entry>
-      <entry key="RegisterUiTest">
-        <State />
-      </entry>
       <entry key="app">
         <State>
           <targetSelectedWithDropDown>
@@ -25,9 +22,6 @@
         </State>
       </entry>
       <entry key="testAccountSelection()">
-        <State />
-      </entry>
-      <entry key="testRegisterButtonShowsRegisterActivity()">
         <State />
       </entry>
     </value>
